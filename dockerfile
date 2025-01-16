@@ -12,7 +12,7 @@ ADD https://mediaarea.net/repo/deb/repo-mediaarea_1.0-24_all.deb ./repo-mediaare
 RUN dpkg -i repo-mediaarea_1.0-24_all.deb 
 
 # sonarr sources
-ADD https://services.sonarr.tv/v1/download/main/latest?version=3&os=linux /tmp/sonarr.tar.gz
+ADD https://services.sonarr.tv/v1/download/main/latest?version=4&os=linux /tmp/sonarr.tar.gz
 RUN tar -xvzf /tmp/sonarr.tar.gz -C /opt \
 && rm /tmp/sonarr.tar.gz \
 && apt install -y mediainfo sqlite3 mono-complete
@@ -27,4 +27,4 @@ RUN mkdir /config
 
 #startup
 
-CMD mono /opt/Sonarr/Sonarr.exe -data=/config
+CMD ["/opt/Sonarr/Sonarr", "-nobrowser", "-data=/config"]
