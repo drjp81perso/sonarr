@@ -8,8 +8,8 @@ RUN apt-get update && apt-get install -y  gnupg2 ca-certificates \
 && echo "deb [signed-by=/usr/share/keyrings/mono-official-archive-keyring.gpg] https://download.mono-project.com/repo/ubuntu stable-focal main" | tee /etc/apt/sources.list.d/mono-official-stable.list 
 
 # mediainfo sources
-ADD https://mediaarea.net/repo/deb/repo-mediaarea_1.0-24_all.deb ./repo-mediaarea_1.0-24_all.deb 
-RUN dpkg -i repo-mediaarea_1.0-24_all.deb 
+ADD https://mediaarea.net/repo/deb/repo-mediaarea_1.0-25_all.deb ./repo-mediaarea_1.0-25_all.deb 
+RUN dpkg -i repo-mediaarea_1.0-25_all.deb 
 
 # sonarr sources
 ADD https://services.sonarr.tv/v1/download/main/latest?version=4&os=linux /tmp/sonarr.tar.gz
