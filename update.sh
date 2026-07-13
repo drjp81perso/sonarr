@@ -1,2 +1,2 @@
-#|/bin/bash
-docker-compose pull && docker-compose down && docker-compose up -d
+#!/bin/bash
+docker compose pull && docker compose up -d --remove-orphans && docker compose logs -f

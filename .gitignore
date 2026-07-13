@@ -1,2 +1,6 @@
 
 docker-compose.yml
+name
+has_build
+autostart
+docker-compose.override.yml
