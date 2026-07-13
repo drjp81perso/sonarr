@@ -1,5 +1,5 @@
 FROM drjp81/powershell
-
+USER 0
 ARG DEBIAN_FRONTEND=noninteractive
 
 # mono sources
